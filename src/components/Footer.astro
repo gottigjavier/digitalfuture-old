@@ -1,0 +1,39 @@
+---
+// src/components/Footer.astro
+const footerSections = [
+  {
+    title: "Product",
+    links: ["Features", "Pricing", "Security"]
+  },
+  {
+    title: "Company",
+    links: ["About", "Careers", "Contact"]
+  },
+  {
+    title: "Resources",
+    links: ["Blog", "Help Center", "API Docs"]
+  },
+  {
+    title: "Legal",
+    links: ["Privacy", "Terms"]
+  }
+];
+---
+
+<footer class="bg-gray-900 px-4 py-8 bottom-0 w-screen">
+  <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-white text-opacity-85">
+    {footerSections.map((section) => (
+      <div>
+        <h3 class="font-semibold mb-4">{section.title}</h3>
+        <ul class="space-y-2">
+          {section.links.map((link) => (
+            <li><a href="#" class="hover:text-gray-300">{link}</a></li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+  <div class="mt-8 text-center text-sm text-gray-500">
+    © 2024 Digital Future. Todos los Derechos Reservados.
+  </div>
+</footer>

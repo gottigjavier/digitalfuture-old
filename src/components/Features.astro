@@ -1,0 +1,20 @@
+---
+// src/components/Features.astro
+const features = [
+  { title: "Upload your data", description: "Connect your data warehouse or upload CSVs" },
+  { title: "Clean with AI", description: "Flux automatically detects and fixes data quality issues" },
+  { title: "Export anywhere", description: "Push clean data to your warehouse, BI tool, or download as CSVs" }
+];
+---
+
+<section class="px-4 py-12">
+  <h2 class="text-3xl font-bold mb-8 text-center">How Flux works</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    {features.map((feature) => (
+      <div class="p-6 rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">{feature.title}</h3>
+        <p>{feature.description}</p>
+      </div>
+    ))}
+  </div>
+</section>
