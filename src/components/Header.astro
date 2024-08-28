@@ -1,6 +1,5 @@
 ---
 import Logo from './Logo.astro';
-import ThemeSelect from './ThemeSelect.astro';
 import ThemeToggleButton from './ThemeToggleButton.astro';
 ---  
 
@@ -21,13 +20,10 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
     <div class="menu-toggle pl-4" id="menu-toggle">
       ☰
     </div>
-    <!-- <ThemeSelect /> -->
      <div class="theme">
        <ThemeToggleButton />
      </div>
-  <!--   <button id="setTheme">theme.setTheme("auto")</button>
-    <p><code>theme.getTheme()</code> returns: <code id="getTheme"></code></p>
-   --></nav>
+  </nav>
   
   <script is:inline>
     document.getElementById('menu-toggle').addEventListener('click', function() {
@@ -36,7 +32,7 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
     });
     </script>
   
-  <script is:inline>
+  <!-- <script is:inline>
     document
       .getElementById("setTheme")
       .addEventListener("click", () => theme.setTheme("auto"));
@@ -47,13 +43,11 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
       const resultsElem = document.getElementById("getTheme");
       resultsElem && (resultsElem.innerHTML = theme.getTheme());
     });
-  </script>
+  </script> -->
 
 <style>
   /* Para theme */
   code {
-    background-color: black;
-    color: white;
     font-style: italic;
     border-radius: 5px;
     padding: 2px;
