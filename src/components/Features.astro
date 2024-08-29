@@ -10,7 +10,7 @@ const features = [
     src: "/pics/joven-sentados-h.avif" 
   },
   { title: "Nuevo Mundo", 
-    description: "Un mundo nuevo está aquí, a sólo un click de distancia.",
+    description: "Un mundo siempre nuevo está a sólo un click de distancia.",
     src: "/pics/mundo-mano-h.avif" 
   }
 ];
@@ -26,7 +26,7 @@ const featureslength = features.length;
       <div class="p-6 rounded-lg">
         <h3 class="text-xl font-semibold mb-2">{feature.title}</h3>
         <img class="rounded my-2" src={feature.src} alt="imagen" />
-        <p>{feature.description}</p>
+        <p class="text-center"><i>{feature.description}</i></p>
       </div>
     ))}
   </div>
