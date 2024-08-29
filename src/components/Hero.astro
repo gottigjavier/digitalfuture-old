@@ -6,10 +6,10 @@
   <!-- <p class="text-xl md:text-1xl my-2 max-w-4xl mx-auto">
     El primer paso hacia una tienda virtual o a la digitalización de una empresa suele ser el más difícil.
   </p> -->
-  <h1 class="text-4xl md:text-6xl font-bold mb-6">
+  <h1 class="text-2xl lg:text-5xl font-bold mb-6">
     Te abrimos la puerta al <span class="text-blue-500">Futuro</span>
   </h1>
-  <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0">
+  <div class="flex flex-col justify-center items-center space-y-4 md:space-y-0">
       <img class="rounded-lg" src="/pics/mundo-atras-h.avif" alt="imagen">
       <!-- <h3 class="text-img text-4xl">¡Ven con nosotros!</h3> -->
   </div>
@@ -20,7 +20,7 @@
     justify-content: center;
   }
   img {
-    width: 70%;
+    width: 60%;
     transition: transform 2s;
     transform: rotate3D(-1,1,0, 0deg) translate(0%, 0%) scale(1, 1);
   }
@@ -37,4 +37,10 @@
     bottom: -95vh;
     left: 2vw;
   }
+
+  @media (max-width: 768px){
+      img {
+        width: 100%;
+      }
+    }
  </style>
