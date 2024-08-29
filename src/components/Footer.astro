@@ -6,8 +6,11 @@ const footerSections = [
     links: ["Features", "Pricing", "Security"]
   }, */
   {
-    title: "Company",
-    links: ["About", "Contact"]
+    title: "Empresa",
+    stitle1: "Sobre Nosotros",
+    link1: "#",
+    stitle2: "Contacto",
+    link2: "#"
   },
   /* {
     title: "Resources",
@@ -15,7 +18,10 @@ const footerSections = [
   }, */
   {
     title: "Legal",
-    links: ["Privacy", "Terms"]
+    stitle1: "Privacidad y",
+    link1: "/legales",
+    stitle2: "Términos de Uso",
+    link2: "/legales"
   }
 ];
 ---
@@ -26,9 +32,8 @@ const footerSections = [
       <div>
         <h3 class="font-semibold mb-4">{section.title}</h3>
         <ul class="space-y-2">
-          {section.links.map((link) => (
-            <li><a href="#" class="hover:text-gray-300">{link}</a></li>
-          ))}
+            <li><a href={section.link1} class="hover:text-gray-300">{section.stitle1}</a></li>
+            <li><a href={section.link2} class="hover:text-gray-300">{section.stitle2}</a></li>
         </ul>
       </div>
     ))}

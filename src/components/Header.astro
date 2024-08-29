@@ -1,6 +1,7 @@
 ---
 import Logo from './Logo.astro';
 import ThemeToggleButton from './ThemeToggleButton.astro';
+import ContactModal from './ContactModal.astro';
 ---  
 
   <nav class="navbar">
@@ -9,12 +10,12 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
     </div>
     <div class="nav-links">
       <a href="/">Inicio</a>
-      <a href="/productos">Productos</a>
+      <a role="button" data-modal-trigger="modal-custom">Contacto</a>
       <a href="/legales">Legales</a>
     </div>
     <div class="mobile-menu" id="mobile-menu">
       <a href="/">Inicio</a>
-      <a href="/productos">Productos</a>
+      <a role="button" data-modal-trigger="modal-custom">Contacto</a>
       <a href="/legales">Legales</a>
     </div>
     <div class="menu-toggle pl-4" id="menu-toggle">
@@ -24,6 +25,9 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
        <ThemeToggleButton />
      </div>
   </nav>
+  <div>
+    <ContactModal />
+  </div>
   
   <script is:inline>
     document.getElementById('menu-toggle').addEventListener('click', function() {
@@ -31,20 +35,6 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
       mobileMenu.classList.toggle('active');
     });
     </script>
-  
-  <!-- <script is:inline>
-    document
-      .getElementById("setTheme")
-      .addEventListener("click", () => theme.setTheme("auto"));
-
-    document.getElementById("getTheme").innerHTML = theme.getTheme();
-
-    document.addEventListener("theme-changed", () => {
-      const resultsElem = document.getElementById("getTheme");
-      resultsElem && (resultsElem.innerHTML = theme.getTheme());
-    });
-  </script> -->
-
 <style>
   /* Para theme */
   code {
@@ -113,4 +103,5 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
         margin-right: 75%;
       }
     }
+
     </style>
